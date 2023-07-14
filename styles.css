@@ -1,0 +1,60 @@
+.pin {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	width: 1px;
+	height: 1px;
+	background-color: black;
+	animation-name: wind;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.petal {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 0 25% 0 0;
+	transform-origin: 0% 0%;
+	border: 1px #000 solid;
+	border-style: solid;
+	border-width: 100px 0 100px 100px;
+	
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	
+}
+.petal:nth-of-type(1) {
+  transform: rotate(0deg);
+  border-left-color: #9B0075;
+  border-top-color: #C93597;
+}
+
+.petal:nth-of-type(2) {
+  transform: rotate(90deg);
+  border-left-color: #3F831C;
+  border-top-color: #80C31C;
+}
+.petal:nth-of-type(3) {
+  transform: rotate(180deg);
+  border-left-color: #C31200;
+  border-top-color: #FE5200;
+}
+.petal:nth-of-type(4) {
+  transform: rotate(270deg);
+  border-left-color: #2A8EBF;
+  border-top-color: #83CEE3;
+}
+
+
+
+@keyframes wind {
+   0% {
+     transform: rotate(360deg);
+   }
+   100% {
+     transform: rotate(0deg);
+   }
+}
